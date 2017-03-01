@@ -1,0 +1,11 @@
+id: afb5a7a0-0714-41c1-a8da-5b24b9f96b40
+deploy:
+  ignore: []
+  directory: .
+plugins:
+  - name: basic-auth
+    path: /
+    options:
+      username: $BASIC_AUTH_USERNAME
+      password: $BASIC_AUTH_PASSWORD
+  - name: webpage
