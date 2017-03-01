@@ -1,0 +1,45 @@
+.nav {
+  background: #549eff;
+}
+.nav strong {
+  font-size: 1.2em;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: inline-block;
+  margin-right: 2rem;
+}
+.nav a:hover {
+  color: #222;
+}
+.new {
+  background: #ff98d8;
+  color: #fff;
+  padding: 5px;
+}
+.well2 {
+  background: #d3eeff;
+  padding: .5rem;
+  border-radius: 3px;
+  text-align: center;
+}
+.breaker {
+  background: #549eff;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+.jumbotron {
+  background: #1d81ff;
+  color: #fff;
+}
+.service-box {
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  margin: 3px;
+  padding-left: 1rem;
+  min-height: 15rem;
+}
