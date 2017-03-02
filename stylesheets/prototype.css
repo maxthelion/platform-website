@@ -10,3 +10,27 @@ a.todo {
 .kray-link a:hover {
   background: rgba(255, 0, 125, 0.4);
 }
+body {
+  position: relative;
+}
+.meta-menu {
+  position: absolute;
+  border: 1px solid #222;
+  border-radius: 5px;
+  width: 50px;
+  top: 5px;
+  left: 5px;
+  background: #eee;
+  transition: width 0.3s;
+  overflow: hidden;
+}
+.meta-menu .link-list {
+  width: 400px;
+  padding-left: 2rem;
+}
+.meta-menu .link-list a:visited {
+  color: purple;
+}
+.meta-menu:hover {
+  width: 400px;
+}
