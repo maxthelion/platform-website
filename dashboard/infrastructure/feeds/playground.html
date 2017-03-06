@@ -1,0 +1,95 @@
+
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/dashboard/stylesheets/dashboard.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/stylesheets/prototype.css" type="text/css" media="screen">
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+    <script src="/javascripts/prototype.js"></script>
+  </head>
+  <body>
+    <div class="nav">
+      <a href="/index.html"><strong>Pusher</strong></a>
+  
+      <a href="./">Products</a>
+      <a href="./">Mission</a>
+    </div>
+    
+    <div class=container-fluid>
+    
+    <div class="row">
+      <div class="col-md-2 side-nav">
+        <p><a href="/dashboard/">Dashboard</a></p>
+        
+        <h3>My projects</h3>
+        
+        <ul>
+          <li><a href="/dashboard/infrastructure/feeds/welcome.html">My Feeds project</a></li>
+        </ul>
+      </div>
+      
+      <div class="col-md-10">
+
+        <div class="tabs">
+          <a href="./getting-started.html">Getting started</a>
+          <a href="./playground.html">Playground</a>
+          <a href="./tokens.html">Access</a>
+          <a href="./permissions.html">Permissions</a>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-2">
+            <h2>Feeds</h2>
+            <ul class="feed-list">
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <h2>Items</h2>
+            <ul class="item-list">
+              <li>Feed 1</li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+          </div>
+        </div>
+        
+        <script type="text/javascript">
+          $().ready(function(){
+            for (var i = 0; i < 200; i++) {
+              var el = $(`<li><a href="#">Feed ${i}</a></li>`)
+              $(".feed-list").append( el )
+              el.id = `feed-btn-${i}`
+              el.click(function(){
+                redrawItems()
+              })
+            }
+          })
+          var itemIndex
+          function redrawItems(){
+            $('.item-list').empty()
+            for (itemIndex = 0; itemIndex < 10; itemIndex++) {
+              addItem()
+            }
+            startItemTimeout()
+          }
+          
+          function addItem(){
+              var el = $(`<li><a href="#">Item ${itemIndex}</a></li>`)
+              $(".item-list").append( el )
+              el.id = `item-btn-${itemIndex}`
+          }
+          function startItemTimeout(){
+            itemIndex++
+            addItem()
+            setTimeout(startItemTimeout, Math.random() * 10000)
+          }
+        </script>
+      </div>
+    </div>
+    </div>
+
+  </body>
+</html>

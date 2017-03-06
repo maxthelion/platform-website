@@ -5,6 +5,23 @@
 .nav a {
   color: #fff;
 }
+.tabs {
+  padding-top: 1rem;
+}
+.tabs a {
+  color: #222;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: inline-block;
+  margin-right: 2rem;
+  background: #eee;
+  padding: 1rem;
+  border: 2px solid #bbb;
+  border-bottom: none;
+}
+.tabs a:hover {
+  color: #3c6ebb;
+}
 .side-nav {
   background: #ddd;
   height: 90%;
@@ -15,4 +32,10 @@
   margin: 3px;
   padding-left: 1rem;
   min-height: 15rem;
+}
+/* Feeds */
+.feed-list {
+  overflow: scroll;
+  height: 80%;
+  background: yellow;
 }
