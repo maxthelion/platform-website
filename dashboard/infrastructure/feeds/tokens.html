@@ -9,6 +9,9 @@
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
     <script src="/javascripts/prototype.js"></script>
+    <script src="/lib/modal/jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="/lib/modal/jquery.modal.min.css" type="text/css" media="screen" />
+
   </head>
   <body>
     <div class="nav">
@@ -40,7 +43,31 @@
         </div>
         
         <h2>Your access tokens</h2>
-        <img src=/dashboard/images/feeds/tokens.png width=100%>
+        
+        <div class="row">
+          <div class="col-md-8">
+        <table class="table">
+            <tr>
+              <td class="col-md-2">API KEY</td>
+              <td><a href="tokens/key-details.html" rel="modal:open">Key details</a></td>
+              <td class="col-md-2"><a class="btn btn-primary" href="#revoke">Revoke</a></td>
+            </tr>
+            <tr>
+              <td class="col-md-2">Token generator</td>
+              <td><a href="tokens/key-details.html" rel="modal:open">Key details</a></td>
+              <td class="col-md-2"><a class="btn btn-primary" href="#revoke">Revoke</a></td>
+            </tr>
+        </table>
+        
+            <p><a href="tokens/new-access-key.html" rel="modal:open" class="btn btn-primary">Add new access method</a></p>
+          </div>
+          <div class="col-md-4">
+              <p>
+                Public access <a href="#" class="btn btn-danger">enabled</a>
+              </p>
+          </div>
+        </div>
+          
         
       </div>
     </div>
